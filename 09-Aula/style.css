@@ -1,0 +1,41 @@
+body{
+
+    background-color: blueviolet;
+    /* alinhamento do texto */
+
+    text-align: center;
+    
+
+    /* ESTILIZAÇÃO VIA TAG */
+    ul{
+        background-color: rgb(172, 172, 241);
+        list-style: none;
+
+    }
+
+    li {
+        /* cor do fundo */
+        background-color: black;
+        /* cor do texto */
+        color: white;
+        /* largura do elemento */
+        width: 200px;
+        /* altura do elemento */
+        height: 50px;
+        /* tamanho da fonte */
+        font-size: 30px;
+        /* espaço do elemento */
+        margin-left: auto;
+        margin-right: auto;
+   }
+
+   h2{
+    font-size: 70px;
+    color: yellow;
+    /* estilo do texto */
+    font-style: italic;
+    /* familia da fonte */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+
+}
