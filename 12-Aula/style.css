@@ -1,0 +1,198 @@
+/* IMPORTAÇÃO DA FONTES DO GOOGLE */
+/* VIA URL */
+*{
+    margin: 0px;
+    padding: 5px
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body{
+    background-color: antiquewhite;
+    margin: 20px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* USANDO FONTE VIA URL */
+
+h1{
+    font-weight:  200;
+}
+
+h2{    
+    font-weight:  600;
+}
+
+/* ESTILIZAÇÃO DE VARIOS ELEMENTOS AO MESMO TEMPO */
+h1,h2{
+    font-family: "Lora", serif;
+    color: #1f3c88;
+}
+
+/* ESTILIZAÇÃO VIA CLASSE */
+.bloco{
+    background-color: white;
+    border:2px solid gray;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* IMPORTAR FONTES DO PROJETO */
+@font-face {
+    font-family: "Huninn";
+    src: url(../12-Aula/Fontes/Huninn-Regular.ttf);
+}
+
+/* USANDO A FONTE DO PROJETO */
+P{
+    font-family: "Huninn";
+    font-size: 15px;
+    color: darkblue;
+}
+
+/* PSEUDO CLASSES */
+/* LINKS NÃO VISITADOS */
+a:link{
+    color: pink;
+}
+
+/* LINKS JÁ VISITADOS */
+a:visited{
+    color: greenyellow;
+}
+
+/* LINK QUE ESTA ATIVO, QUE ESTA CLICADO */
+a:active{
+    color: greenyellow;
+}
+
+/* quando passa o mouse em cima */
+a:hover{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+ }
+
+/* quando passa o mouse em cima */
+ button:hover{
+    cursor: pointer;
+    background-color: violet;
+    color: white;
+    padding: 5px;
+ }
+
+/* BOTÃO QUE ESTA ATIVO, QUE ESTÁ CLICADO */
+button:active{
+    transform: rotate(50deg);
+    transition: 3s;
+}
+
+/* INPUT QUANDO ESTA SELECIONADO */  
+
+input:focus{
+    outline: none;
+    border: 2px solid yellow;
+    background-color: azure;
+}
+
+/* INPUT QUANDO É OBRIGATORIO */
+input:required{
+    border: 2px solid red;
+}
+
+/* QUANDO O PREENCHIMENTO E VALIDO */
+input:valid{
+    background-color: rgb(51, 255, 0);
+}
+
+/* QUANDO O PREENCHIMENTO E INVALIDO */
+input:invalid{
+    background-color: red;
+}
+
+/* QUANDO O CHECKBOX ESTÁ MARCADO */
+input:checked{
+    accent-color: green;
+}
+
+/* ESTILIZA OS INPUTS DESABILITADOS */
+input:disabled{
+    background-color: #e5e7eb;
+    color: #6b7280;
+
+}
+
+/* SELECIONA O PRIMEIRO FILHO. */
+.lista-exemplo li:first-child{
+    color: green;
+    font-weight: bold;
+}
+
+/* SELECIONA O ULTIMO FILHO. */
+.lista-exemplo li:last-child{
+    color: purple;
+    font-weight: bold;
+    background-image: linear-gradient(red,yellow,green) ;
+}
+
+.lista-exemplo li:nth-child(3){
+    background-color: gold;
+}
+
+/* SELECIONAR ESPAÇOS SEM CONTEUDO */
+.caixa-vazia:empty{
+    width: 200px;
+    height: 150px;
+    background-color: pink;
+}
+
+/* SELECIONA A PRIMEIRA LETRA DE UM TEXTO */
+.texto-especial::first-letter{
+    color: royalblue;
+    font-size: 50px;
+}
+
+/* SELECIONA A PRIMEIRA LINHA DE UM TEXTO */
+.texto-especial::first-line{
+    color: gold;
+    font-size: 20px;
+}
+
+
+/* PSEUDO ELEMENTOS */
+/* INSERE ITENS ANTES DOS ELEMENTOS */
+
+h2::before{
+    content: " 🥱 ";
+}
+
+/* INSERE ITENS DEPOIS DOS ELEMENTOS */
+h2::after{
+    content: " 🎶 ";
+}
+
+/* ESTILIZANDO O TEXTO DENTRO DO INPUT */
+input::placeholder{
+    color: darkblue;
+    font-style: italic;
+}
+
+/* ESTILIZANDO O TEXTO SELECIONADO  */
+::selection{
+    background-color: rgb(73, 129, 250);
+}
+
+/* ESTILIZANDO OS MARCADORES DE TEXTO */
+.lista-marker li::marker{
+    color: violet;
+    font-size: 50px;
+}
+
+li::before{
+    content: " - ";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
