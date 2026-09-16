@@ -158,3 +158,26 @@ p{
     display: none;
 }
 
+/* EXEMPLO FEX */
+.exemplo-flex{
+    display: flex;
+    background-color: var(--color-primary);
+    padding: 20px;
+    gap: var(--gap);
+
+}
+
+.exemplo-flex div{
+    /* FLEX = ADAPTA O TAMANHO DO ELEMENTO DE ACORDO COM O ESPACO DISPONIVEL */
+    /* GROW = DIZ RESPEITO A EXPANCAO */
+    /* SHRIK = DIZ RESPEITO AO ENCOLIMENTO DO ELEMENTO */
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 20px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+
+}
+
+/* FLEX DIRECTION */
