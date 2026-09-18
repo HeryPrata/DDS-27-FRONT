@@ -289,3 +289,72 @@ p{
     align-items: center;
     justify-content: center;
 }
+/* GRID */
+
+/* PAI GRID */
+/* GRID = PERMITE ORGANIZA OS ELEMENTOS EM LINHAS E COLUNAS */
+.exemplo-grid{
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: 30% 70%; /* TAMANHO DO ESPCAO OCUPADO. TAMANHO RELATIVO AO PAI */
+    grid-template-rows: 200px 80px 600px; /* TAMANHO EM PIXEIS DA TRES LINHAS*/
+    /* MESMA COISA QUE O CODIGO DE CIMA. A FUNÇÃO TEMPLATE E DIVIDIDA EM LINHAS A ESQUERDA E COLUNA A DIREITA = (grid-template: 1fr 2fr/ 3fr 7fr;) */
+
+}
+/* FILHOS ALINHADOS EM GRADES */
+.exemplo-grid div{
+    background-color: pink;
+    color: var(--color-white);
+    padding: 30px;
+    text-align: center;
+}
+
+/* GRID-TEMPLATE */
+/* PAI */
+.grid-duas-colunas{
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: 50% 50%; /* SEPARA AS COLUNAS USANDO O COLOMNS*/
+
+}   
+
+/* FILHO */
+.grid-duas-colunas div{
+    background-color: yellowgreen;
+    color: var(--color-white);
+    padding: 30px;
+    text-align: center;
+}
+
+/* PAI */
+.grid-quatro-colunas{
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(4,1fr); /* SEPARA AS COLUNAS USANDO O REPET. 2 = QUANTIDADE DE REPETIÇÃO DO PRIME. FR = DIVIDIR A QUANTIDADE DE COLUNAS PELO NUMERO DO FR, PARA GERAR O ESPACO OCUPADO. */
+}
+
+/* FILHO */
+.grid-quatro-colunas div{
+    background-color: violet;
+    color: var(--color-white);
+    padding: 30px;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+    
+    .exemplo-inline-block div{
+        width: 85%;
+        margin-bottom: 12px;
+
+    }
+
+    .grid-duas-colunas{
+        grid-template-columns: 100%;
+    }
+
+    .grid-quatro-colunas{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
