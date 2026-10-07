@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "trebuc";
+    src: url(./Fonte/trebuc.ttf);
+}
+
+
+*{
+    background-color: #2484bf;
+    font-family: "trebuc";
+}
+
+h1{
+    font-size: 18px;
+}
+
+p{
+    font-size: 14px
+}
+
+.container{
+    padding: 20px;
+    margin-top: 15px;
+    background-color:#2298e1 ;
+}
+
+nav li{
+    list-style: none;
+}
+
+.topo{
+    display: flex;
+}
+
+.icones{
+    justify-content:left ;
+}
+
+.BarraNavegacao{
+    justify-content: flex;
+    align-items: right;
+    
+    border: 1px solid;
+}
+
+.icones img{
+    width:50;
+    display: block;
+    height: 50px;
+  
+}
+
+
+.texto{
+    display: inline-block;
+    border: solid;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    margin: 15px
+}
+
+.bloco-footer{
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid;
+
+}
