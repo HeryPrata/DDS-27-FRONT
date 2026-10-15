@@ -15,3 +15,6 @@ Abra os arquivos HTML no navegador ou use Live Server no VS Code.
 - `gap`: espaço entre os itens.
 - `padding`: espaço dentro de um elemento, entre a borda e o conteúdo.
 - `margin`: espaço fora do elemento.
+
+
+OBS: # PRA COLOCAR LINKS DE PARTE DO SITE DENTRO DA PROPRIA ABA
