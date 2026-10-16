@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #38a9d3;
+  color: #444;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 4%;
+  border-bottom: 20px solid #104f70;
+}
+
+.logo {
+  display: block;
+  padding: 25px;
+  background-color: white;
+  color: #2a9fc6;
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  background-color: white;
+}
+
+.menu a {
+  color: #666;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.conteudo {
+  max-width: 1300px;
+  margin: 35px auto;
+  padding: 25px;
+  background-color: #f4f4f4;
+}
+
+.introducao {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* A propriedade que alinha os cartões é aplicada ao PAI */
+.grade-cartoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  min-width: 0;
+}
+
+.card h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #777;
+}
+
+.card li {
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.rodape {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 50px;
+  padding: 25px 4%;
+  background-color: white;
+  border-top: 20px solid #104f70;
+}
+
+.rodape section {
+  padding: 15px 20px;
+  border-right: 2px solid #38a9d3;
+}
+
+.rodape section:last-child {
+  border-right: none;
+}
+
+.rodape h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #777;
+}
+
+@media (max-width: 800px) {
+  .topo {
+    flex-wrap: wrap;
+  }
+
+  .grade-cartoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rodape {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape section {
+    border-right: none;
+    border-bottom: 2px solid #38a9d3;
+  }
+}
+
+@media (max-width: 520px) {
+  .grade-cartoes {
+    grid-template-columns: 1fr;
+  }
+}

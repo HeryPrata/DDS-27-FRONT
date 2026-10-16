@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between; /* separa logo e menu */
+  align-items: center;            /* alinha verticalmente */
+  gap: 25px;
+  padding: 25px 5%;
+  background-color: #38a9d3;
+}
+
+.logo {
+  background-color: white;
+  color: #1687ad;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 25px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* espaço entre os links */
+  background-color: white;
+  padding: 20px;
+}
+
+.menu a {
+  color: #666;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+main {
+  padding: 30px 5%;
+}
+
+/* Se não houver espaço, os elementos podem quebrar linha */
+@media (max-width: 700px) {
+  .cabecalho {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}

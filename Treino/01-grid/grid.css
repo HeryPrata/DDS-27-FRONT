@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #38a9d3;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* O GRID fica no elemento PAI */
+.container {
+  display: grid;
+
+  /* 3 colunas com a mesma largura */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Espaço entre os cartões, na horizontal e vertical */
+  gap: 20px;
+
+  /* Limita e centraliza a área de cartões */
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #f4f4f4;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  min-height: 180px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #777;
+}
+
+.card p {
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Em telas estreitas, os cartões passam para 1 coluna */
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
