@@ -32,7 +32,9 @@ var produtos = [
         
     }  
 
-    if (callback) callback();
+    if (callback) {
+    callback();
+}
 }
 
  function listarMenu(callback){
@@ -41,7 +43,10 @@ var produtos = [
         console.log(`Nome: ${produtos[i].nome} || Preco: ${produtos[i].preco} || Categoria: ${produtos[i].categoria}`);
     }
     
-    if (callback) callback();
+    if (callback) {
+    callback();
+}
+     
 }
 
  function listarPedidos(){
@@ -52,10 +57,8 @@ var produtos = [
     
 } 
 
-// EXECUÇÃO DO CÓDIGO
-listarMenu();
 
+listarMenu();
 var pNome = prompt("Digite o nome: ")
 var pQtd = prompt("Digite a quantidade: ")
-
 cadastrarPedido(pNome, pQtd, listarPedidos);
