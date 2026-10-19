@@ -10,10 +10,7 @@ var produtos = [
 
 ]
 
- function cadastrarPedido(){
-    var pNome = prompt("Digite o nome: ")
-    var pQtd = prompt("Digite a quantidade: ")
-
+ function cadastrarPedido(pNome, pQtd, callback){
     for(var i = 0; i < produtos.length; i++){
         if(pNome.toLowerCase() == produtos[i].nome.toLowerCase()){
             console.log("O pedido localizado");
@@ -22,10 +19,10 @@ var produtos = [
 
             pedidosRegistrados.push(
                 {
-                    nome: produtos[i].nome,
-                    preco: produtos[i].preco,
-                    categoria: produtos[i].categoria,
-                    quantidade: pQtd
+                    produto: produtos[i].nome,
+                    quantidade: pQtd,
+                    precoUnitario: produtos[i].preco,
+                    valorTotal: valorTotal
 
                 },
 
@@ -35,37 +32,30 @@ var produtos = [
         
     }  
 
+    if (callback) callback();
 }
 
- function listarMenu(){
+ function listarMenu(callback){
     console.log("Opções disponiveis:");
-    for( var i = 0; i < 5; i++){
+    for( var i = 0; i < produtos.length; i++){
         console.log(`Nome: ${produtos[i].nome} || Preco: ${produtos[i].preco} || Categoria: ${produtos[i].categoria}`);
     }
     
+    if (callback) callback();
 }
 
  function listarPedidos(){
     console.log("Pedidos Registrados:");
     for( var i = 0; i < pedidosRegistrados.length; i++){
-        console.log(`Nome: ${pedidosRegistrados[i].nome} || Preco: ${pedidosRegistrados[i].preco} || Categoria: ${pedidosRegistrados[i].categoria} || Quantidade: ${pedidosRegistrados[i].quantidade}`);
+        console.log(`Produto: ${pedidosRegistrados[i].produto} || Quantidade: ${pedidosRegistrados[i].quantidade} || Preço unitário: ${pedidosRegistrados[i].precoUnitario} || Valor total: ${pedidosRegistrados[i].valorTotal}`);
     }
     
 } 
 
+// EXECUÇÃO DO CÓDIGO
+listarMenu();
 
+var pNome = prompt("Digite o nome: ")
+var pQtd = prompt("Digite a quantidade: ")
 
-
-
-
-
-
-
-
-
-
-
-cadastrarPedido()
-console.log(pedidosRegistrados);
-listarMenu()
-console.log(listarPedidos())
+cadastrarPedido(pNome, pQtd, listarPedidos);
